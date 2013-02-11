@@ -1,0 +1,37 @@
+package rational
+
+class RationalSolution(n:Int, d:Int) {
+
+  require(d!=0, "Denominator cannot be zero")
+  val numerator = n / greatestCommonDivisor(n.abs,d.abs)
+  val denominator = d / greatestCommonDivisor(n.abs,d.abs)
+
+  def this(n:Int) = this(n, 1)
+
+  override def toString = {
+    if (this.denominator == 1) {
+      this.numerator.toString
+    }
+    else {
+      new StringBuilder(this.numerator.toString).append("/").append(this.denominator.toString).toString
+    }
+  }
+
+  def +(that:Rational):Rational = {
+      new Rational(this.numerator * that.denominator + that.numerator * this.denominator, this.denominator * that.denominator)
+  }
+
+  def -(that:Rational):Rational = {
+    new Rational(this.numerator * that.denominator - that.numerator * this.denominator, this.denominator * that.denominator)
+  }
+
+
+  def *(that:Rational):Rational = {
+    new Rational(this.numerator * that.numerator, this.denominator * that.denominator)
+  }
+
+  private def greatestCommonDivisor(first:Int, second:Int):Int = {
+    if(second == 0) first else greatestCommonDivisor(second, first % second)
+  }
+
+}
