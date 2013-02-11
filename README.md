@@ -27,7 +27,8 @@ If you use Intellij-IDEA, just type "gen-idea" at the sbt prompt.
 
 Plugin Sites for Eclipse
 -------------------------
-Scala IDE Ecosystem (Includes ScalaTest): http://download.scala-ide.org/ecosystem/dev-2.0-2.9/site/ 
+Scala IDE Ecosystem (Includes ScalaTest): http://download.scala-ide.org/ecosystem/dev-2.0-2.9/site/
+
 Sbt Console for Eclipse: http://scala-ide.dreamhosters.com/nightly-update-sbtconsole-scalaide21-29/site/
 
 
