@@ -43,8 +43,11 @@ divisor. For example, 2/3 * 3/4 = 1/2. To give you a hint of how to do this, you
 Eculid's algorithm can be pseudocoded as follows:
 
 Step 1: given two integers p and q, define a function gcd(p,q)
+
 Step 2: if q is 0 then return p
+
 Step 3: else r = p mod q
+
 Step 4: re-evaluate Step 1 as gcd(q,r)
 
 Spoiler Alert -- the file RationalSolution.txt contains my solution. This is meant as a guide only. Your mileage
