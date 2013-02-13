@@ -36,8 +36,16 @@ Problem Overviews
 ----------------
 Your task is to test-drive the Rational.scala class using the spec RationalSpec.scala as your guide for the typical
 red-green-refactor cadence. Sbt has the nice feature of ~test that listens for changes in your test/production code
-and re-runs all of your tests when you make a change. 
+and re-runs all of your tests when you make a change. The operations to add, subtract, multiply, and divide your
+rational objects will also require that you also represent the result of the operation by finding it greatest common
+divisor. For example, 2/3 * 3/4 = 1/2. To give you a hint of how to do this, you should use Euclid's algortihm. 
 
+Eculid's algorithm can be pseudocoded as follows:
+
+Step 1: given two integers p and q, define a function gcd(p,q)
+Step 2: if q is 0 then return p
+Step 3: else r = p mod q
+Step 4: re-evaluate Step 1 as gcd(q,r)
 
 Spoiler Alert -- the file RationalSolution.txt contains my solution. This is meant as a guide only. Your mileage
 may vary.

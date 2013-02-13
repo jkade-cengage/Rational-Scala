@@ -1,4 +1,4 @@
-name := "Testing in Scala"
+name := "Rational-Scala"
 
 version := "1.0.0"
 
