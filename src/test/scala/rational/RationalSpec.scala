@@ -11,7 +11,7 @@ class RationalSpec extends FunSpec with MustMatchers {
 //      val rational = new Rational(1,1)
 //      rational must not be(Nil)
 //    }
-
+//
 //   it("must print out the rational number as a string") {
 //      val rational = new Rational(7,6)
 //      rational.toString must be("7/6")

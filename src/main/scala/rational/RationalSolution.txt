@@ -1,6 +1,6 @@
 package rational
 
-class RationalSolution(n:Int, d:Int) {
+class Rational(n:Int, d:Int) {
 
   require(d!=0, "Denominator cannot be zero")
   val numerator = n / greatestCommonDivisor(n.abs,d.abs)
@@ -8,7 +8,7 @@ class RationalSolution(n:Int, d:Int) {
 
   def this(n:Int) = this(n, 1)
 
-  override def toString = {
+  override def toString:String = {
     if (this.denominator == 1) {
       this.numerator.toString
     }
@@ -17,16 +17,16 @@ class RationalSolution(n:Int, d:Int) {
     }
   }
 
-  def +(that:Rational):Rational = {
+  def + (that:Rational):Rational = {
       new Rational(this.numerator * that.denominator + that.numerator * this.denominator, this.denominator * that.denominator)
   }
 
-  def -(that:Rational):Rational = {
+  def - (that:Rational):Rational = {
     new Rational(this.numerator * that.denominator - that.numerator * this.denominator, this.denominator * that.denominator)
   }
 
 
-  def *(that:Rational):Rational = {
+  def * (that:Rational):Rational = {
     new Rational(this.numerator * that.numerator, this.denominator * that.denominator)
   }
 
